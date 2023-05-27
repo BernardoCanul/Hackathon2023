@@ -2,6 +2,7 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
+class_names = ['Cartón', 'Vidrio', 'Metal', 'Papel', 'Plastico', 'Basura']
 while True:
     ret, frame = cap.read()
 
