@@ -1,7 +1,7 @@
 import os
 import shutil
 
-root_dir = "garbage_classification"
+root_dir = "Garbage classification"
 split_ratio = 0.8
 
 for type in os.listdir(root_dir):
