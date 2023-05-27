@@ -11,7 +11,8 @@ class LogIn:
     def __init__(self, page: ft.Page):
         self.page = page
         self.main_container = self.mainContainers()
-        self.page.add(self.main_container)
+        self.responsiveRow = ft.ResponsiveRow([self.main_container])
+        self.page.add(self.responsiveRow)
         self.page.update()
 
     def mainContainers(self):
@@ -37,14 +38,16 @@ class LogIn:
             bgcolor=ft.colors.GREEN_500,
             on_click=self.button_actions
         )
-        self.main_column.controls.append(self.extra_container)
+        self.responsiveTitle = ft.ResponsiveRow([self.extra_container])
+        self.main_column.controls.append(self.responsiveTitle)
         self.login_container.content = self.main_column
         self.extra_container.content = ft.Text(
             "WELCOME TO ECOSORT",
             size=45,
             weight=ft.FontWeight.BOLD,
             color=ft.colors.WHITE70,
-            font_family="Century Gothic"
+            font_family="Century Gothic",
+            text_align=ft.TextAlign.CENTER,
         )
         return self.login_container
 
