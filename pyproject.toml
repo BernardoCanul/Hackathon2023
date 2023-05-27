@@ -7,6 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+flet = "^0.7.4"
+streamlit = "^1.22.0"
+gradio = "^3.32.0"
 
 
 [build-system]
