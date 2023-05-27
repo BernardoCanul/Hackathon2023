@@ -31,7 +31,7 @@ class LogIn:
 
         self.extra_container = ft.Container(
             width=WIDTH,
-            height=HEIGHT*0.30,
+            height=HEIGHT*0.20,
             border_radius=BORDER_RADIUS,
             padding=PADDING,
             bgcolor=ft.colors.GREEN_500,
@@ -39,7 +39,13 @@ class LogIn:
         )
         self.main_column.controls.append(self.extra_container)
         self.login_container.content = self.main_column
-
+        self.extra_container.content = ft.Text(
+            "WELCOME TO ECOSORT",
+            size=45,
+            weight=ft.FontWeight.BOLD,
+            color=ft.colors.WHITE70,
+            font_family="Century Gothic"
+        )
         return self.login_container
 
     def providers(self):
